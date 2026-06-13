@@ -206,7 +206,7 @@ export default function BlogDetails({ slug }: BlogDetailsProps) {
     <div className="mt-4 rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm">
       {/* Hero */}
       <div className="mb-4">
-        <span className="inline-block rounded-full bg-orange-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-orange-700">
+        <span className="inline-block rounded-full bg-var(--primary)-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-var(--primary)-700">
           {blog.category}
         </span>
 
@@ -247,7 +247,7 @@ export default function BlogDetails({ slug }: BlogDetailsProps) {
           prose-p:leading-relaxed
           prose-p:my-3
 
-          prose-a:text-orange-600
+          prose-a:text-var(--primary)-600
           prose-a:font-medium
           prose-a:underline-offset-4
 
@@ -258,8 +258,8 @@ export default function BlogDetails({ slug }: BlogDetailsProps) {
           prose-pre:rounded-lg
           prose-pre:p-3
 
-          prose-code:text-orange-600
-          prose-code:bg-orange-50
+          prose-code:text-var(--primary)-600
+          prose-code:bg-var(--primary)-50
           prose-code:px-1
           prose-code:rounded
         "
@@ -271,7 +271,7 @@ export default function BlogDetails({ slug }: BlogDetailsProps) {
         <button
           onClick={handleLike}
           disabled={likeLoading}
-          className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 text-xs font-semibold text-slate-700 shadow-sm transition hover:border-orange-300 hover:text-orange-600 disabled:cursor-not-allowed disabled:opacity-60"
+          className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 text-xs font-semibold text-slate-700 shadow-sm transition hover:border-var(--primary)-300 hover:text-var(--primary)-600 disabled:cursor-not-allowed disabled:opacity-60"
         >
           <Heart
             size={16}
@@ -284,7 +284,7 @@ export default function BlogDetails({ slug }: BlogDetailsProps) {
 
         <button
           onClick={scrollToComments}
-          className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 text-xs font-semibold text-slate-700 shadow-sm transition hover:border-orange-300 hover:text-orange-600"
+          className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 text-xs font-semibold text-slate-700 shadow-sm transition hover:border-var(--primary)-300 hover:text-var(--primary)-600"
         >
           <MessageCircle size={16} />
           <span>Comment</span>
@@ -303,13 +303,13 @@ export default function BlogDetails({ slug }: BlogDetailsProps) {
             value={newComment}
             onChange={(e) => setNewComment(e.target.value)}
             placeholder="Write your comment..."
-            className="w-full rounded-lg border border-slate-200 p-2 text-xs outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 min-h-[70px] resize-y"
+            className="w-full rounded-lg border border-slate-200 p-2 text-xs outline-none focus:border-var(--primary)-500 focus:ring-2 focus:ring-var(--primary)-500/20 min-h-[70px] resize-y"
           />
           <div className="mt-2 flex justify-end">
             <button
               type="submit"
               disabled={!newComment.trim() || commentLoading}
-              className="rounded-full bg-orange-500 px-4 py-1.5 text-xs font-semibold text-white hover:bg-orange-600 disabled:cursor-not-allowed disabled:bg-orange-300"
+              className="rounded-full bg-var(--primary)-500 px-4 py-1.5 text-xs font-semibold text-white hover:bg-var(--primary)-600 disabled:cursor-not-allowed disabled:bg-var(--primary)-300"
             >
               {commentLoading ? "Posting..." : "Post Comment"}
             </button>

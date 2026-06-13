@@ -101,7 +101,7 @@ export default function BlogForm({ mode = "new", initialData = {} }: BlogFormPro
             value={title}
             onChange={handleTitleChange}
             placeholder="Enter blog title"
-            className="w-full text-black rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full text-black rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-var(--primary)-500"
             required
           />
         </div>
@@ -115,7 +115,7 @@ export default function BlogForm({ mode = "new", initialData = {} }: BlogFormPro
   <select
     value={category}
     onChange={(e) => setCategory(e.target.value)}
-    className="w-full rounded-lg border px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-orange-500"
+    className="w-full rounded-lg border px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-var(--primary)-500"
     required
   >
     <option value="" disabled>
@@ -140,7 +140,7 @@ export default function BlogForm({ mode = "new", initialData = {} }: BlogFormPro
             onChange={(e) => setImage(e.target.files ? e.target.files[0] : null)}
             className="w-full rounded-lg border px-4 py-3 text-black file:mr-4 file:rounded-lg file:border-0 
                        file:bg-indigo-50 file:px-4 file:py-2 file:text-sm file:font-semibold 
-                       file:text-orange-700 hover:file:bg-indigo-100 focus:outline-none"
+                       file:text-var(--primary)-700 hover:file:bg-indigo-100 focus:outline-none"
           />
           {image && <p className="text-xs text-gray-500">Selected: {image.name}</p>}
         </div>
@@ -169,9 +169,9 @@ export default function BlogForm({ mode = "new", initialData = {} }: BlogFormPro
           <button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center rounded-xl bg-gradient-to-r from-orange-400 to-orange-600
+            className="inline-flex items-center rounded-xl bg-gradient-to-r from-var(--primary)-400 to-var(--primary)-600
                        px-7 py-3 text-sm font-semibold text-white shadow-md
-                       hover:from-orange-500 hover:to-orange-700 transition active:scale-[0.98]"
+                       hover:from-var(--primary)-500 hover:to-var(--primary)-700 transition active:scale-[0.98]"
           >
             {loading ? (mode === "edit" ? "Updating..." : "Saving...") : (mode === "edit" ? "Update Blog" : "Save Blog")}
           </button>

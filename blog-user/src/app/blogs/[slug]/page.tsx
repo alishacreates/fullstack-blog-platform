@@ -90,7 +90,7 @@ export default function BlogPage() {
         <div className="mt-4">
           <button
             onClick={() => router.push("/blogs")}
-            className="rounded-lg bg-orange-500 px-4 py-2 text-white hover:bg-orange-600"
+            className="rounded-lg bg-var(--primary)-500 px-4 py-2 text-white hover:bg-var(--primary)-600"
           >
             Back to Blogs
           </button>
@@ -104,12 +104,12 @@ export default function BlogPage() {
     );
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50/40 to-slate-100">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-var(--primary)-50/40 to-slate-100">
       {/* Back Button */}
       <div className="mx-auto max-w-5xl px-6 pt-10">
         <Link
           href="/blogs"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-orange-600"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-var(--primary)-600"
         >
           <ArrowLeft size={18} />
           Back to blogs
@@ -118,7 +118,7 @@ export default function BlogPage() {
 
       {/* Hero */}
       <article className="mx-auto mt-6 max-w-5xl px-6">
-        <span className="inline-block rounded-full bg-orange-100 px-4 py-1 text-xs font-bold uppercase tracking-wide text-orange-700">
+        <span className="inline-block rounded-full bg-var(--primary)-100 px-4 py-1 text-xs font-bold uppercase tracking-wide text-var(--primary)-700">
           {blog.category}
         </span>
 
@@ -163,7 +163,7 @@ export default function BlogPage() {
       prose-p:leading-relaxed
       prose-p:my-4
 
-      prose-a:text-orange-600
+      prose-a:text-var(--primary)-600
       prose-a:font-medium
       prose-a:underline-offset-4
 
@@ -174,8 +174,8 @@ export default function BlogPage() {
       prose-pre:rounded-lg
       prose-pre:p-4
 
-      prose-code:text-orange-600
-      prose-code:bg-orange-50
+      prose-code:text-var(--primary)-600
+      prose-code:bg-var(--primary)-50
       prose-code:px-1
       prose-code:rounded
     "
@@ -184,17 +184,17 @@ export default function BlogPage() {
 
         {/* Actions */}
         <div className="mt-14 flex gap-4">
-          <button className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 font-semibold text-slate-700 shadow-md transition hover:border-orange-300 hover:text-orange-600">
+          <button className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 font-semibold text-slate-700 shadow-md transition hover:border-var(--primary)-300 hover:text-var(--primary)-600">
             <Heart size={18} /> Like
           </button>
 
-          <button className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 font-semibold text-slate-700 shadow-md transition hover:border-orange-300 hover:text-orange-600">
+          <button className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 font-semibold text-slate-700 shadow-md transition hover:border-var(--primary)-300 hover:text-var(--primary)-600">
             <MessageCircle size={18} /> Comment
           </button>
         </div>
 
         {/* Bottom Accent */}
-        <div className="mt-16 h-1 w-full max-w-5xl rounded-full bg-gradient-to-r from-orange-500 to-orange-600" />
+        <div className="mt-16 h-1 w-full max-w-5xl rounded-full bg-gradient-to-r from-var(--primary)-500 to-var(--primary)-600" />
       </section>
 
       {/* Comments Section */}
@@ -207,10 +207,10 @@ export default function BlogPage() {
   <div className="mb-8 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
     <textarea
       placeholder="Write your comment..."
-      className="h-28 w-full resize-none rounded-lg border border-slate-200 p-3 text-sm outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30"
+      className="h-28 w-full resize-none rounded-lg border border-slate-200 p-3 text-sm outline-none focus:border-var(--primary)-500 focus:ring-2 focus:ring-var(--primary)-500/30"
     />
     <div className="mt-3 flex justify-end">
-      <button className="rounded-full bg-orange-500 px-6 py-2 text-sm font-semibold text-white hover:bg-orange-600">
+      <button className="rounded-full bg-var(--primary)-500 px-6 py-2 text-sm font-semibold text-white hover:bg-var(--primary)-600">
         Post Comment
       </button>
     </div>
